@@ -6,6 +6,50 @@
     <title>AUTO-IMMUNE DISEASES</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+                /* For mobile devices */
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+        }
+
+        /* For tablets */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            body {
+                font-size: 16px;
+            }
+        }
+
+        /* For desktops and laptops */
+        @media (min-width: 1025px) {
+            body {
+                font-size: 18px;
+            }
+        }
+
+        .container {
+            display: grid;
+            gap: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+            img, video {
+        max-width: 100%;
+        height: auto;
+    }
+
+
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(to right, rgba(173, 216, 230, 0.8), rgba(135, 206, 250, 0.8));
