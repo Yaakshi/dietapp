@@ -58,21 +58,25 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            /* background: linear-gradient(135deg, #FFDEE9, #B5FFFC); Gradient background */
-            /* background-image: url("pexels-rdne-6129867.jpg"); */
+            position: relative; /* Set body as relative */
+            overflow: hidden; /* Prevents overflow when minimized */
+}
 
-        }
-        
         body::before {
             content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url("pexels-rdne-6129867.jpg"), #000;
+            position: fixed; /* Fixed position to span the viewport */
+            top: 0;
+            left: 0;
+            width: 100vw; /* Use vw for full viewport width */
+            height: 100vh; /* Use vh for full viewport height */
+            background: url("pexels-rdne-6129867.jpg"), #fff;
             background-position: center;
             background-size: cover;
-            filter: brightness(80%)
+            filter: brightness(80%);
+            background-repeat: no-repeat;
+            z-index: -1; /* Place the background behind the content */
 }
+
 
         .glass {
             background: rgba(255, 255, 255, 0.2);
@@ -117,14 +121,12 @@
     </style>
 </head>
 <body>
-    <div class="container">
     <div class="glass">
         <h1>FROM GUT TO GLORY:</h1>
         <h2>IMPACT OF DIET ON YOUR MICROBIAL BALANCE</h2>
         <button class="glass-button" onclick="window.location.href='healthy.html'"><h3>HEALTHY DIET</h3></button>
         <button class="glass-button" onclick="window.location.href='unhealthy.html'"><h3>uNHEALTHY DIET</h3></button>
         <button class="glass-button" onclick="window.location.href='autoimmune.html'"><h3>AUTO-IMMUNE DISEASES AND MICROBIAL ALTERATIONS</h3></button>
-    </div>
     </div>
 </body>
 </html>
